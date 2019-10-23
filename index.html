@@ -14,7 +14,8 @@
     <h1 class="textHead">SELAMAT DATANG DI WEB PERSONALKU</h1>
     <hr class="borderWording"/>
 </div>
-<div id="mySidenav" class="sidenav">
+<div id="Sidenavigation" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
     <a class="click" id="profile">Profile</a>
     <a class="click" id="album">Album</a>
     <a class="click" id="hobby">Hobby</a>
@@ -22,8 +23,19 @@
     <a class="click" id="prestasi">Prestasi</a>
     <a class="click" id="pendidikan">Pendidikan</a>
 </div>
+<span style="font-size:30px;cursor:pointer" onclick="openMenu()" class="menu" id="menus">&#9776; Menu</span>
 <div class="content" id="content"></div>
 <script type="text/javascript">
+    function openMenu(){
+        document.getElementById("Sidenavigation").style.width="250px";
+        document.getElementById("content").style.marginLeft="250px";
+        document.getElementById("menus").style.marginLeft="250px"
+    }
+    function closeMenu(){
+        document.getElementById("Sidenavigation").style.width="0";
+        document.getElementById("content").style.marginLeft="0";
+        document.getElementById("menus").style.marginLeft="0"
+    }
     $(document).ready(function () {
         $('.click').click(function () {
             var menu = $(this).attr('id');
