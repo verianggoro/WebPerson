@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Personalku</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<div id="myimgheader" class="header">
+    <img src="img/veri.jpg" alt="Banner Veri" class="imgheader">
+</div>
+<div class="txtHeader" id="textHeader">
+    <h1 class="textHead">SELAMAT DATANG DI WEB PERSONALKU</h1>
+    <hr class="borderWording"/>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a class="click" id="profile">Profile</a>
+    <a class="click" id="album">Album</a>
+    <a class="click" id="hobby">Hobby</a>
+    <a class="click" id="activity">Kegiatan</a>
+    <a class="click" id="prestasi">Prestasi</a>
+    <a class="click" id="pendidikan">Pendidikan</a>
+</div>
+<div class="content" id="content"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.click').click(function () {
+            var menu = $(this).attr('id');
+            if (menu == 'profile') {
+                $('.content').load('menu/profile.html')
+            } else if (menu == 'album') {
+                $('.content').load('menu/album.html')
+            } else if (menu == 'hobby') {
+                $('.content').load('menu/hobby.html')
+            } else if (menu == 'activity') {
+                $('.content').load('menu/activity.html')
+            } else if (menu == 'prestasi') {
+                $('.content').load('menu/prestasi.html')
+            } else if (menu == 'pendidikan') {
+                $('.content').load('menu/pendidikan.html')
+            }
+        });
+        $('.content').load('menu/profile.html')
+    });
+</script>
+</body>
+</html>
