@@ -23,18 +23,21 @@
     <a class="click" id="prestasi">Prestasi</a>
     <a class="click" id="pendidikan">Pendidikan</a>
 </div>
-<span style="font-size:30px;cursor:pointer" onclick="openMenu()" class="menu" id="menus">&#9776; Menu</span>
+<span style="font-size:30px;cursor:pointer" onclick="openMenu()" class="menu" id="menus">Menu</span>
 <div class="content" id="content"></div>
 <script type="text/javascript">
     function openMenu(){
         document.getElementById("Sidenavigation").style.width="250px";
         document.getElementById("content").style.marginLeft="250px";
-        document.getElementById("menus").style.marginLeft="250px"
+        document.getElementById("menus").style.marginLeft="250px";
     }
     function closeMenu(){
         document.getElementById("Sidenavigation").style.width="0";
         document.getElementById("content").style.marginLeft="0";
-        document.getElementById("menus").style.marginLeft="0"
+        document.getElementById("menus").style.marginLeft="0";
+    }
+    function validate(){
+
     }
     $(document).ready(function () {
         $('.click').click(function () {
