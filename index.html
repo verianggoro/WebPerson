@@ -22,8 +22,13 @@
     <a class="click" id="activity">Kegiatan</a>
     <a class="click" id="prestasi">Prestasi</a>
     <a class="click" id="pendidikan">Pendidikan</a>
+    <a class="click" id="news">Berita Terkait</a>
+    <ul>
+        <li><a class="click" id="detik" href="https://detik.com" target="_blank">Detik.com</a></li>
+        <li><a class="click" id="kompas" href="https://kompas.com" target="_blank">Kompas.com</a></li>
+    </ul>
 </div>
-<span style="font-size:30px;cursor:pointer" onclick="openMenu()" class="menu" id="menus">Menu</span>
+<span style="font-size:30px;cursor:pointer" onclick="openMenu()" class="menu" id="menus">&#9776; Menu</span>
 <div class="content" id="content"></div>
 <script type="text/javascript">
     function openMenu(){
@@ -35,9 +40,6 @@
         document.getElementById("Sidenavigation").style.width="0";
         document.getElementById("content").style.marginLeft="0";
         document.getElementById("menus").style.marginLeft="0";
-    }
-    function validate(){
-
     }
     $(document).ready(function () {
         $('.click').click(function () {
